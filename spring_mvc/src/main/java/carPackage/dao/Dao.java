@@ -1,6 +1,6 @@
-package Dao;
+package carPackage.dao;
 
-import model.Car;
+import carPackage.model.Car;
 
 import java.util.List;
 

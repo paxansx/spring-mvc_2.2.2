@@ -1,11 +1,13 @@
-package Dao;
+package carPackage.dao;
 
-import model.Car;
+import carPackage.model.Car;
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+@Repository
 public class DaoImp implements Dao {
     @Override
     public List<Car> cars() {
