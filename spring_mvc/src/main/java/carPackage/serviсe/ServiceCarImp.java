@@ -3,8 +3,8 @@ package carPackage.serviсe;
 import carPackage.dao.Dao;
 import carPackage.model.Car;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
 import java.util.List;
 @Service
 public class ServiceCarImp implements ServiceCar {
@@ -16,7 +16,7 @@ public class ServiceCarImp implements ServiceCar {
 
 
     @Override
-    @Transient
+
     public List<Car> cars(){
         return daoImp.cars();
     }
@@ -24,7 +24,7 @@ public class ServiceCarImp implements ServiceCar {
 
 
     @Override
-    @Transient
+    @Transactional
     public <T> List<T> getCars( List<T> arr, int count) {
         return daoImp.getCars(arr, count);
     }
